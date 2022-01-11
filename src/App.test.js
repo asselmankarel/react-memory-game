@@ -1,9 +1,9 @@
 import { render, screen } from "@testing-library/react";
 import App from "./App";
 
-test("renders mermory game title", () => {
+test("renders memory game title", () => {
   render(<App />);
-  const linkElement = screen.getByText(/memory game/i);
+  const titleElement = screen.getByRole("heading", { text: /memory game/i });
 
-  expect(linkElement).toBeInTheDocument();
+  expect(titleElement).toBeInTheDocument();
 });

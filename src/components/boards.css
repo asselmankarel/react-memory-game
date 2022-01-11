@@ -1,0 +1,18 @@
+.board {
+  display: grid;
+  gap: 1rem;
+  margin: 1rem;
+}
+
+.board-12,
+.board-16 {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.board-24 {
+  grid-template-columns: repeat(6, 1fr);
+}
+
+.board-32 {
+  grid-template-columns: repeat(8, 1fr);
+}

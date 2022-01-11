@@ -1,5 +1,6 @@
 import React from "react";
+import "./board.css";
 
 export default function Board({ size }) {
-  return <div></div>;
+  return <div className="board"></div>;
 }
