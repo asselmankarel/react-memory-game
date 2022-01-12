@@ -1,13 +1,25 @@
 import React from "react";
 import "./card.css";
 
-export default function Card({ card }) {
-  const onClick = (id) => {};
+export default function Card({ card, onHandleClick }) {
+  const onClick = (card) => {
+    if (card.status !== "completed") {
+      onHandleClick(card);
+    }
+  };
 
   return (
-    <div className="card" onClick={() => onClick(card.id)}>
+    <div className="card" onClick={() => onClick(card)}>
       <img className="card-front" src={card.src} alt="" />
-      <img className="card-back" src="images/card-back.jpg" alt="card back" />
+      <img
+        className={card.status === "hidden" ? "card-back" : "card-back hidden"}
+        src="images/card-back.jpg"
+        alt="card back"
+      />
+
+      {card.status === "completed" && (
+        <img className="card-completed" src="images/checkmark.png" alt="" />
+      )}
     </div>
   );
 }

@@ -1,5 +1,6 @@
 .card {
   position: relative;
+  height: 20vh;
 }
 
 .card:hover {
@@ -19,7 +20,13 @@
 }
 
 .card-back {
-  position: relative;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.card-completed {
+  position: absolute;
   top: 0;
   left: 0;
 }

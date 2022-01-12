@@ -1,0 +1,38 @@
+form {
+  width: 60%;
+  margin: 2rem auto;
+  font-size: 1.75rem;
+  color: white;
+  border: 1px solid whitesmoke;
+  border-radius: 4px;
+  padding: 2rem;
+}
+
+button {
+  border: none;
+  border-radius: 2px;
+
+  background-color: #2a9d8f;
+  color: whitesmoke;
+  padding: 0.5rem 1rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-top: 2rem;
+}
+button:hover {
+  cursor: pointer;
+  color: #e9c46a;
+  transform: scale(1.02);
+}
+
+select {
+  padding: 0.4rem 0.2rem;
+  margin-left: 0.5rem;
+}
+
+.row {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 1rem;
+  align-items: center;
+}

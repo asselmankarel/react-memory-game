@@ -1,7 +1,7 @@
 .app-header {
   display: flex;
   justify-content: space-between;
-  padding: 1rem 3rem;
+  padding: 1rem 10%;
 
   color: #f1faee;
 }
@@ -15,5 +15,6 @@
 }
 
 .score-number {
+  margin-left: 1rem;
   color: #e9c46a;
 }

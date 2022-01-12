@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "./newGameForm.css";
 
 export default function NewGameForm({ handleStartNewGame }) {
   const [numberOfPlayers, setNumberOfPlayers] = useState(1);
@@ -11,7 +12,10 @@ export default function NewGameForm({ handleStartNewGame }) {
 
   return (
     <form onSubmit={onSubmit} name="newGameForm">
-      <div>
+      <div className="row">
+        <h3>New Game</h3>
+      </div>
+      <div className="row">
         <label htmlFor="numberOfPLayers">Number of players:</label>
         <select
           name="numberOfPlayers"
@@ -22,7 +26,7 @@ export default function NewGameForm({ handleStartNewGame }) {
           <option value="2">2</option>
         </select>
       </div>
-      <div>
+      <div className="row">
         <label htmlFor="numberOfCards">Number of cards:</label>
         <select
           name="numberOfCards"
@@ -34,7 +38,9 @@ export default function NewGameForm({ handleStartNewGame }) {
           <option value="24">24</option>
         </select>
       </div>
-      <button type="submit">Start</button>
+      <div className="row">
+        <button type="submit">Start</button>
+      </div>
     </form>
   );
 }
