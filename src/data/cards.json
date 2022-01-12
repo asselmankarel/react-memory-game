@@ -1,0 +1,18 @@
+[
+  { "id": 1, "src": "images/australian-cattle-dog.jpg" },
+  { "id": 2, "src": "images/avocets.jpg" },
+  { "id": 4, "src": "images/black-skimmer.jpg" },
+  { "id": 5, "src": "images/cat.jpg" },
+  { "id": 6, "src": "images/cormorant.jpg" },
+  { "id": 7, "src": "images/dog.jpg" },
+  { "id": 8, "src": "images/ducks.jpg" },
+  { "id": 9, "src": "images/egrets.jpg" },
+  { "id": 10, "src": "images/elephant.jpg" },
+  { "id": 11, "src": "images/ibis.jpg" },
+  { "id": 12, "src": "images/peacock.jpg" },
+  { "id": 13, "src": "images/snake.jpg" },
+  { "id": 14, "src": "images/snow-fox.jpg" },
+  { "id": 15, "src": "images/turtle.jpg" },
+  { "id": 16, "src": "images/wood-duck.jpg" },
+  { "id": 17, "src": "images/woodpecker.jpg" }
+]

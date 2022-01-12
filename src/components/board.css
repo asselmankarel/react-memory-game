@@ -1,7 +1,9 @@
 .board {
   display: grid;
-  gap: 1rem;
-  margin: 1rem;
+  gap: 0.3rem;
+  margin: 0 auto;
+  width: 95%;
+  max-width: 1600px;
 }
 
 .board-12,
@@ -11,8 +13,4 @@
 
 .board-24 {
   grid-template-columns: repeat(6, 1fr);
-}
-
-.board-32 {
-  grid-template-columns: repeat(8, 1fr);
 }
