@@ -1,6 +1,8 @@
 .card {
   position: relative;
   height: 20vh;
+  border: 3px solid lightgray;
+  border-radius: 5px;
 }
 
 .card:hover {
@@ -17,16 +19,28 @@
   position: absolute;
   top: 0;
   left: 0;
+  transition: all ease-in-out 0.2s;
+  transform: rotateY(90deg);
 }
 
 .card-back {
   position: absolute;
   top: 0;
   left: 0;
+  transition: all ease-in-out 0.2s;
 }
 
-.card-completed {
+.completed {
   position: absolute;
   top: 0;
   left: 0;
+  background-color: rgba(100, 100, 100, 0.5);
+}
+
+.hidden {
+  transform: rotateY(90deg);
+}
+
+.shown {
+  transform: rotateY(0deg);
 }

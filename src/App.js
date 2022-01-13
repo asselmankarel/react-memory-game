@@ -2,13 +2,24 @@ import "./App.css";
 import Board from "./components/Board";
 import NewGameForm from "./components/NewGameForm";
 import { useState } from "react";
-import { loadCards, initialState } from "./data/CardLoader";
+import { loadCards } from "./data/CardLoader";
+import Header from "./components/Header";
+
+const initialState = {
+  numberOfPlayers: 0,
+  scorePlayer1: 0,
+  scorePlayer2: 0,
+  turnsPlayer1: 0,
+  turnsPlayer2: 0,
+  cards: [],
+};
 
 function App() {
   const [state, setState] = useState(initialState);
 
   const handleStartNewGame = (numberOfPlayers, numberOfCards) => {
     const cards = loadCards(numberOfCards);
+
     setState({
       ...initialState,
       numberOfPlayers,
@@ -17,15 +28,8 @@ function App() {
   };
 
   const handleCardClicked = (card) => {
-    switch (card.status) {
-      case "hidden":
-        card.status = "shown";
-        break;
-      case "shown":
-        card.status = "hidden";
-        break;
-      default:
-        break;
+    if (card.status === "hidden") {
+      card.status = "shown";
     }
 
     let updatedCards = state.cards.map((c) => (c.key === card.key ? card : c));
@@ -60,21 +64,12 @@ function App() {
 
   return (
     <div className="app">
-      <header className="app-header">
-        <h1>Memory</h1>
-        <div className="score">
-          <h3>Score</h3>
-          <p>
-            Player 1: <span className="score-number">{state.scorePlayer1}</span>
-          </p>
-          {state.numberOfPlayers > 1 && (
-            <p>
-              Player 2:{" "}
-              <span className="score-number">{state.scorePlayer2}</span>
-            </p>
-          )}
-        </div>
-      </header>
+      <Header
+        scorePlayer1={state.scorePlayer1}
+        scorePlayer2={state.scorePlayer1}
+        numberOfPlayers={state.numberOfPlayers}
+        onNewGame={handleStartNewGame}
+      />
       {state.cards?.length > 0 ? (
         <Board cards={state.cards} onCardClicked={handleCardClicked} />
       ) : (

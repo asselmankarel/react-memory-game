@@ -10,7 +10,11 @@ export default function Card({ card, onHandleClick }) {
 
   return (
     <div className="card" onClick={() => onClick(card)}>
-      <img className="card-front" src={card.src} alt="" />
+      <img
+        className={card.status !== "hidden" ? "card-front shown" : "card-front"}
+        src={card.src}
+        alt=""
+      />
       <img
         className={card.status === "hidden" ? "card-back" : "card-back hidden"}
         src="images/card-back.jpg"
@@ -18,7 +22,7 @@ export default function Card({ card, onHandleClick }) {
       />
 
       {card.status === "completed" && (
-        <img className="card-completed" src="images/checkmark.png" alt="" />
+        <img className="completed" src="images/checkmark.png" alt="" />
       )}
     </div>
   );

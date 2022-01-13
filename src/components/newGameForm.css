@@ -3,8 +3,9 @@ form {
   margin: 2rem auto;
   font-size: 1.75rem;
   color: white;
-  border: 1px solid whitesmoke;
+  border: 3px solid lightgray;
   border-radius: 4px;
+
   padding: 2rem;
 }
 

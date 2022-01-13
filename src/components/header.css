@@ -1,0 +1,26 @@
+.app-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 10%;
+
+  color: #f1faee;
+}
+
+.app-header h3 {
+  margin: 0;
+}
+
+.app-header p {
+  margin: 0.4rem 0;
+}
+
+.score-number {
+  margin-left: 1rem;
+  color: #e9c46a;
+}
+
+.button {
+  margin: 0;
+  font-size: 1.2rem;
+}

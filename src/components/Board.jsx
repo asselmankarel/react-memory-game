@@ -3,7 +3,6 @@ import "./board.css";
 import Card from "./Card";
 
 export default function Board({ cards, onCardClicked }) {
-  console.log(cards);
   const classNames = `board board-${cards.length}`;
 
   const handleClick = (card) => {
