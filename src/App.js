@@ -32,7 +32,9 @@ function App() {
       card.status = "shown";
     }
 
-    let updatedCards = state.cards.map((c) => (c.key === card.key ? card : c));
+    let updatedCards = state.cards.map((originalCard) =>
+      originalCard.key === card.key ? card : originalCard
+    );
     const visibleCards = updatedCards.filter((card) => card.status === "shown");
 
     setState({ ...state, cards: updatedCards });
