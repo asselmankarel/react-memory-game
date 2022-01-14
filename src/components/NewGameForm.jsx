@@ -11,7 +11,7 @@ export default function NewGameForm({ handleStartNewGame }) {
   };
 
   return (
-    <form onSubmit={onSubmit} name="newGameForm">
+    <form onSubmit={onSubmit} name="newGameForm" data-testid="newGameForm">
       <div className="row">
         <h3>New Game</h3>
       </div>

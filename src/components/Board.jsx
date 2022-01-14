@@ -10,7 +10,7 @@ export default function Board({ cards, onCardClicked }) {
   };
 
   return (
-    <div className={classNames}>
+    <div className={classNames} data-testid="board">
       {cards.map((card) => (
         <Card card={card} key={card.key} onHandleClick={handleClick} />
       ))}
