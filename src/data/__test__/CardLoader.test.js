@@ -1,5 +1,6 @@
 import { loadCards } from "../CardLoader";
 import "@testing-library/jest-dom/extend-expect";
+import { validate } from "uuid";
 
 describe("CardLoader", () => {
   const cards = loadCards(12);
@@ -13,6 +14,10 @@ describe("CardLoader", () => {
     expect("src" in cards[0]).toBeTruthy();
     expect("status" in cards[0]).toBeTruthy();
     expect("key" in cards[0]).toBeTruthy();
+  });
+
+  test("Key must be a valid uuid", () => {
+    expect(validate(cards[0].key)).toBeTruthy();
   });
 
   test("Should return the 12 cards passed in as parameter", () => {

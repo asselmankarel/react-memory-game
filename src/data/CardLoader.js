@@ -1,3 +1,5 @@
+import { v4 } from "uuid";
+
 export const loadCards = (numberOfCards) => {
   const cards = [];
   let data = [
@@ -29,6 +31,6 @@ export const loadCards = (numberOfCards) => {
   const cardsAndDuplicates = cards.concat(shuffledDuplicates);
 
   return cardsAndDuplicates.map((card) => {
-    return { ...card, key: Math.random() };
+    return { ...card, key: v4() };
   });
 };
